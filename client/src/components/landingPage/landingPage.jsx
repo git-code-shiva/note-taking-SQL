@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import Card from "../../card";
 import './landingPage.css'
+import Header from "../header/header";
 const LandingPage=()=>{
     const [post,setPost] = useState([]);
     const [data,setData] = useState("");
@@ -40,6 +41,7 @@ const LandingPage=()=>{
     }
     return(
         <>
+        <Header/>
         <div className="input_bar">
             <input type="text" placeholder="Take a note..." name="note" value={data.note} onChange={handleInput}/>
             <button className="post_btn" onClick={handlePost}>Add</button>
